@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+# configuring project to to use Custom user model
+AUTH_USER_MODEL = 'custom_user.CustomUser' 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,9 +41,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "admin_app",
-    "customer_app",
-    "courier_app",
-    "vendor_app"
+    "customer",
+    "courier",
+    "vendor",
+    "custom_user",
 ]
 
 MIDDLEWARE = [
